@@ -10,6 +10,9 @@ class Topic(models.Model):
 		'''返回模型耳的字符节表示'''
 		return self.text
 
+
+
+
 class Entry(models.Model):
 	'''学到的有关某个主题的具体知识'''
 	topic = models.ForeignKey(Topic,on_delete=models.CASCADE)

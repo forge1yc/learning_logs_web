@@ -18,11 +18,12 @@ from django.contrib import admin
 from django.conf.urls import include,url
 app_name='learning_logs'
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-	#url(r'^admin/',include(admin.site.urls)),
-	#url(r'^admin/', include(admin.site.urls)),
+    url(r'^admin/', admin.site.urls),#这是修改后的
+	#url(r'^admin/',include(admin.site.urls)),#这个是书中原来的程序
 
-	url(r'',include(('learning_logs.urls','learning_logs'),namespace = 'learning_logs')),
+	url(r'',include(('learning_logs.urls','learning_logs'),namespace = 'learning_logs')),#这是修改后的
+	#url(r'', include('learning_logs.urls', namespace='learning_logs')),#这是书中原来的
+
 	#path(' ', include('learning_logs.urls', namespace=app_name)),
 
 ]
